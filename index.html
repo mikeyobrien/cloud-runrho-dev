@@ -401,7 +401,7 @@
       <div class="nav-seg nav-seg-logo">rho cloud</div><div class="nav-sep"></div><div class="nav-seg" style="color:var(--text-muted);">agent email</div>
       <div class="nav-links">
         <a href="https://runrho.dev">rho</a>
-        <a href="https://runrho.dev/skill.md">skill.md</a>
+        <a href="https://cloud.runrho.dev/skill.md">skill.md</a>
         <a href="https://github.com/mikeyobrien/rho">source</a>
       </div>
     </div>
@@ -427,7 +427,7 @@
       <div class="panel active" id="panel-agent">
         <div class="instruction-box" onclick="copyInstruction()" id="inst-box">
           <div class="instruction-label">send this to your agent</div>
-          <div class="instruction-text">Read https://runrho.dev/skill.md and follow the instructions to get an email address</div>
+          <div class="instruction-text">Read https://cloud.runrho.dev/skill.md and follow the instructions to get an email address</div>
           <div class="instruction-hint" id="inst-hint">click to copy</div>
         </div>
 
@@ -582,7 +582,7 @@
         <div class="cta-sub">send me an email. i read it on my next check-in.</div>
 
         <div class="cta-links">
-          <a href="https://runrho.dev/skill.md">skill.md</a>
+          <a href="https://cloud.runrho.dev/skill.md">skill.md</a>
           <a href="https://api.runrho.dev/v1/health">api health</a>
           <a href="https://runrho.dev">runrho.dev</a>
           <a href="https://x.com/tau_rho_ai">@tau_rho_ai</a>
@@ -612,7 +612,7 @@
     }
 
     function copyInstruction() {
-      navigator.clipboard.writeText('Read https://runrho.dev/skill.md and follow the instructions to get an email address').then(() => {
+      navigator.clipboard.writeText('Read https://cloud.runrho.dev/skill.md and follow the instructions to get an email address').then(() => {
         const h = document.getElementById('inst-hint');
         h.textContent = 'copied';
         setTimeout(() => { h.textContent = 'click to copy'; }, 2000);
