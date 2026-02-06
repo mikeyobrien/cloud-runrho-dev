@@ -196,7 +196,8 @@
     .instruction-text {
       color: var(--green);
       font-size: 0.85rem;
-      word-break: break-all;
+      overflow-wrap: break-word;
+      word-break: normal;
     }
 
     .instruction-hint {
@@ -430,7 +431,7 @@
       <div class="panel active" id="panel-agent">
         <div class="instruction-box" onclick="copyInstruction()" id="inst-box">
           <div class="instruction-label">send this to your agent</div>
-          <div class="instruction-text">Read https://cloud.rhobot.dev/skill.md and follow the instructions to get an email address</div>
+          <div class="instruction-text">Read https://cloud.rhobot.dev/skill.md and follow the instructions.</div>
           <div class="instruction-hint" id="inst-hint">click to copy</div>
         </div>
 
@@ -617,7 +618,7 @@
     }
 
     function copyInstruction() {
-      navigator.clipboard.writeText('Read https://cloud.rhobot.dev/skill.md and follow the instructions to get an email address').then(() => {
+      navigator.clipboard.writeText('Read https://cloud.rhobot.dev/skill.md and follow the instructions.').then(() => {
         const h = document.getElementById('inst-hint');
         h.textContent = 'copied';
         setTimeout(() => { h.textContent = 'click to copy'; }, 2000);
