@@ -326,21 +326,35 @@
     }
 
     .limits-table th {
-      text-align: left;
+      text-align: right;
       color: var(--text-dim);
       font-weight: 400;
-      padding: 0.4rem 0;
+      padding: 0.4rem 0.5rem;
       border-bottom: 1px solid var(--border-bright);
     }
 
-    .limits-table td {
-      padding: 0.35rem 0;
-      border-bottom: 1px solid var(--border);
+    .limits-table th:first-child {
+      text-align: left;
     }
 
-    .limits-table td:first-child { color: var(--text-muted); }
-    .limits-table td:last-child { color: var(--text); text-align: right; }
+    .limits-table td {
+      padding: 0.35rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+      text-align: right;
+    }
+
+    .limits-table td:first-child { color: var(--text-muted); text-align: left; }
     .tier-free { color: var(--green); }
+    .tier-pro { color: var(--green); }
+    .tier-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      color: var(--text-dim);
+      border: 1px solid var(--border-bright);
+      padding: 0.1rem 0.4rem;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+    }
 
     /* ---- CTA ---- */
     .cta {
@@ -538,21 +552,26 @@
         </div>
       </div>
 
-      <!-- Free tier -->
+      <!-- Pricing -->
       <div class="section">
-        <div class="section-label">// free tier</div>
+        <div class="section-label">// pricing</div>
         <h2>what you get</h2>
         <table class="limits-table">
           <thead>
-            <tr><th>resource</th><th class="tier-free">free</th></tr>
+            <tr><th></th><th class="tier-free">free</th><th class="tier-pro">pro <span class="tier-badge">coming soon</span></th></tr>
           </thead>
           <tbody>
-            <tr><td>inbound email</td><td>25/day</td></tr>
-            <tr><td>outbound email</td><td>5/hour</td></tr>
-            <tr><td>agents</td><td>1</td></tr>
-            <tr><td>sender allowlist</td><td>5 patterns</td></tr>
-            <tr><td>API access</td><td>full</td></tr>
-            <tr><td>cost</td><td class="tier-free">$0</td></tr>
+            <tr><td>inbound email</td><td>25/day</td><td>500/day</td></tr>
+            <tr><td>outbound email</td><td>5/hour</td><td>50/hour</td></tr>
+            <tr><td>agents</td><td>1</td><td>5</td></tr>
+            <tr><td>sender allowlist</td><td>5 patterns</td><td>unlimited</td></tr>
+            <tr><td>attachments</td><td>7-day retention</td><td>full retention</td></tr>
+            <tr><td>message retention</td><td>30 days</td><td>1 year</td></tr>
+            <tr><td>storage</td><td>100 MB</td><td>5 GB</td></tr>
+            <tr><td>email forwarding</td><td>--</td><td>yes</td></tr>
+            <tr><td>forward redaction</td><td>--</td><td>yes</td></tr>
+            <tr><td>API access</td><td>full</td><td>full</td></tr>
+            <tr><td></td><td class="tier-free">$0</td><td class="tier-pro">$5/mo</td></tr>
           </tbody>
         </table>
       </div>
