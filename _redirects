@@ -1,0 +1,2 @@
+# SPA fallback for claim flow -- /claim/:token routes to the React app
+/claim/* /claim/index.html 200
